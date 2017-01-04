@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!--
+    <mongo:mongo host="localhost" port="27017"/>
+    <bean id="mongoTemplate" class = "org.springframework.data.mongodb.core.MongoTemplate">
+        <constructor-arg ref="mongo"/>
+        <constructor-arg name="databaseName" value="appDB"/>
+    </bean>
+    <mongo:repositories base-package="com.prashast.repository" mongo-template-ref="mongoTemplate"/>
+    -->
+
+    <!--
+    <bean id="userModelService" class="com.prashast.service.UserModelService">
+        <property name="mongoTemplate" ref="mongoTemplate"/>
+    </bean>
+    -->
+
+    <!--
+
+    <security:authentication-manager>
+        <security:authentication-provider user-service-ref="userModelService"/>
+    </security:authentication-manager>
+
+    <security:http auto-config="true">
+        <security:intercept-url pattern="/rest/*" access="isAuthenticated()"/>
+    </security:http>
+
+    -->
+
+
+    <context:component-scan base-package="com.prashast"/>
+    <context:annotation-config/>
+
+    <bean class="org.jboss.resteasy.plugins.spring.SpringBeanProcessorServletAware"/>
+
+
+</beans>
