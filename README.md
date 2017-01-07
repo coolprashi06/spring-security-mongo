@@ -29,10 +29,10 @@ T_USER
 
 Mongo collection to Java DTO mapping can be found in **com.prashast.dto.User** class.
 
-In **com.prashast.rest** package you'd find following RESTful resources:
-1. AdminRest - this contains resources under /admin path and would only be available for users with role ROLE_ADMIN
-2. UnsecuredRest - this contains resources under /unsecured path and would be available for any user irrespective of role.
-3. SecuredRest - this contains resources under /account path and would be available for users with role ROLE_USER.
+##### In **com.prashast.rest** package you'd find following RESTful resources
+1. **AdminRest** - this contains resources under /admin path and would only be available for users with role ROLE_ADMIN
+2. **UnsecuredRest** - this contains resources under /unsecured path and would be available for any user irrespective of role.
+3. **SecuredRest** - this contains resources under /account path and would be available for users with role ROLE_USER.
 
 ### Steps to configure and apply Spring Security to your application
 
