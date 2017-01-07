@@ -53,6 +53,10 @@
         <servlet-name>resteasy-servlet</servlet-name>
         <url-pattern>/rest/*</url-pattern>
     </servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>logon.html</welcome-file>
+    </welcome-file-list>
 
 
 </web-app>
